@@ -39,11 +39,9 @@ Serena is a dual-layer coding agent toolkit:
 - Handles caching, error recovery, and multiple language server lifecycle
 
 **3. Tool System (`src/serena/tools/`)**
-- **file_tools.py** - File system operations, search, regex replacements
+- **file_tools.py** - Regex-based code replacements
 - **symbol_tools.py** - Language-aware symbol finding, navigation, editing
 - **memory_tools.py** - Project knowledge persistence and retrieval
-- **config_tools.py** - Project activation, mode switching
-- **workflow_tools.py** - Onboarding and meta-operations
 
 **4. Configuration System (`src/serena/config/`)**
 - **Contexts** - Define tool sets for different environments (desktop-app, agent, ide-assistant)

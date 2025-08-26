@@ -1,8 +1,8 @@
 description: Only read-only tools, focused on analysis and planning
 prompt: |
-  You are operating in onboarding mode. This is the first time you are seeing the project.
+  You are operating in project analysis mode. This is the first time you are seeing the project.
   Your task is to collect relevant information about it and to save memories using the tools provided.
-  Call relevant onboarding tools for more instructions on how to do this.
+  Use symbolic tools to understand the project structure and save key insights to memory.
   In this mode, you should not be modifying any existing files.
   If you are also in interactive mode and something about the project is unclear, ask the user for clarification.
 excluded_tools:
