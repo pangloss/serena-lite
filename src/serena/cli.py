@@ -210,8 +210,6 @@ class TopLevelCommands(AutoRegisteringGroup):
     def print_system_prompt(project: str, log_level: str, only_instructions: bool, context: str, modes: tuple[str, ...]) -> None:
         prefix = "You will receive access to Serena's symbolic tools. Below are instructions for using them, take them into account."
         postfix = "You begin by acknowledging that you understood the above instructions and are ready to receive tasks."
-        from serena.tools.workflow_tools import InitialInstructionsTool
-
         lvl = logging.getLevelNamesMapping()[log_level.upper()]
         logging.configure(level=lvl)
         context_instance = SerenaAgentContext.load(context)
@@ -222,8 +220,7 @@ class TopLevelCommands(AutoRegisteringGroup):
             context=context_instance,
             modes=mode_instances,
         )
-        tool = agent.get_tool(InitialInstructionsTool)
-        instr = tool.apply()
+        instr = agent.create_system_prompt()
         if only_instructions:
             print(instr)
         else:

@@ -106,7 +106,4 @@ prompt: |
 
   IMPORTANT: REMEMBER TO USE WILDCARDS WHEN APPROPRIATE! I WILL BE VERY UNHAPPY IF YOU WRITE LONG REGEXES WITHOUT USING WILDCARDS INSTEAD!
   {% endif %}
-excluded_tools:
- - replace_lines
- - insert_at_line
- - delete_lines
+excluded_tools: []
